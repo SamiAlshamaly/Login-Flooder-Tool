@@ -16,7 +16,7 @@ README
 واجهة رسومية (GUI) مبنية بـ tkinter.
 سجل تفصيلي يظهر النتائج في الوقت الفعلي.
 📸 لقطات من الأداة
-<div align="center"> <img src="screenshot.png" alt="Login Flooder Screenshot" width="600"> </div>
+<div align="center"> <img src="sami_banner.png" alt="Login Flooder Screenshot" width="600"> </div>
 ⚙️ المتطلبات الأساسية
 Python 3.6 أو أحدث.
 المكتبات المطلوبة:
