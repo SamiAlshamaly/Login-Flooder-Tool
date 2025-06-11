@@ -1,100 +1,104 @@
-Login Flooder Tool
-A Python-based tool designed to simulate multiple login attempts on a phishing page for penetration testing and security research purposes. This tool helps in assessing the resilience of phishing pages against brute-force or flooding attacks.
+هل يمكنك اضافة الجمالية في 
+README
+جاوبني بالعربي 
 
-Features
-Multi-threaded Requests: Sends multiple login requests simultaneously to test the target's capacity.
-Random Credentials Generation: Generates random usernames and passwords for each request.
-Tor Integration: Optionally routes requests through the Tor network to mask the origin IP.
-User-Agent Rotation: Uses a list of random User-Agent strings to mimic real browsers.
-GUI Interface: Built with tkinter for ease of use.
-Logging: Displays real-time logs of successful and failed attempts.
-Screenshot
-(You can add a screenshot of the GUI here.)
+بالطبع! إليك إصدار مُحسَّن وجذاب من ملف README.md مع لمسات جمالية وتنسيق متقدم لمشروعك على GitHub. يمكنك نسخه مباشرة وإضافته إلى مستودعك:
 
-Prerequisites
-Before running the tool, ensure you have the following installed:
+<div align="center">🛡️ Login Flooder Tool</div>
+<div align="center"> <img src="https://img.shields.io/badge/Python-3.6%2B-blue?logo=python" alt="Python Version"> <img src="https://img.shields.io/badge/License-MIT-green" alt="License"> <img src="https://img.shields.io/badge/Platform-Windows%20%7C%20Linux%20%7C%20Mac-lightgrey" alt="Platform"> </div> <br>
+أداة مبنية بلغة Python لمحاكاة هجمات الفيض (Flooding) على صفحات تسجيل دخول وهمية (Phishing Pages) لأغراض اختبار الاختراق والبحث الأمني. تتميز بواجهة رسومية سهلة الاستخدام وميزات متقدمة مثل دعم شبكة Tor لتغيير عنوان IP.
 
-Python 3.6 or later
-Required Python libraries:
+✨ الميزات
+إرسال طلبات متعددة بشكل متزامن باستخدام تقنية الخيوط (Threading).
+توليد بيانات عشوائية (أسماء مستخدمين وكلمات مرور) لكل طلب.
+دعم شبكة Tor لإخفاء عنوان IP الخاص بك.
+تناوب وكلاء المستخدم (User-Agent) لمحاكاة متصفحات حقيقية.
+واجهة رسومية (GUI) مبنية بـ tkinter.
+سجل تفصيلي يظهر النتائج في الوقت الفعلي.
+📸 لقطات من الأداة
+<div align="center"> <img src="screenshot.png" alt="Login Flooder Screenshot" width="600"> </div>
+⚙️ المتطلبات الأساسية
+Python 3.6 أو أحدث.
+المكتبات المطلوبة:
 bash
 
 Copy
 pip install requests pillow stem tkinter
-Tor (optional, for IP masking):
-Install Tor on your system.
-Configure the Tor control port (default: 9051) and set a password in torrc.
-Setup
-Clone the repository:
+Tor (اختياري، لتغيير عنوان IP):
+قم بتثبيت Tor على نظامك.
+اضبط منفذ التحكم (افتراضيًا 9051) وكلمة المرور في ملف torrc.
+🚀 كيفية التشغيل
+استنسخ المستودع:
 
 bash
 
 Copy
 git clone https://github.com/yourusername/login-flooder.git
 cd login-flooder
-Install dependencies:
+ثبت المكتبات المطلوبة:
 
 bash
 
 Copy
 pip install -r requirements.txt
-Configure Tor (optional):
+اضبط Tor (اختياري):
 
-Edit the torrc file to enable the control port and set a password:
+عدل ملف torrc وأضف:
 
 Copy
 ControlPort 9051
 HashedControlPassword <your-hashed-password>
-Replace TOR_PASSWORD in the script with your actual Tor password.
-Run the tool:
+استبدل TOR_PASSWORD في الكود بكلمة المرور الخاصة بك.
+شغل الأداة:
 
 bash
 
 Copy
 python login_flooder.py
-Usage
-Enter the Target URL:
+🎯 طريقة الاستخدام
+أدخل رابط الصفحة الوهمية:
 
-Provide the URL of the phishing page (e.g., http://example.com/login).
-Set the Number of Requests:
+مثال: http://example.com/login.
+حدد عدد الطلبات:
 
-Specify how many login attempts you want to simulate.
-Enable Tor (Optional):
+اختر عدد محاولات تسجيل الدخول التي تريد إرسالها.
+تفعيل Tor (اختياري):
 
-Check the "Use Tor to change IP" box to route requests through Tor.
-Start the Attack:
+حدد الخيار "Use Tor to change IP" لإرسال الطلبات عبر شبكة Tor.
+ابدأ الهجوم:
 
-Click the "Start Attack" button to begin sending requests.
-Monitor Logs:
+اضغط على زر "Start Attack" لبدء إرسال الطلبات.
+تابع النتائج:
 
-The GUI displays real-time logs of successful and failed attempts.
-Stop the Attack:
+ستظهر النتائج في نافذة السجل (Log) في الوقت الفعلي.
+أوقف الهجوم:
 
-Click the "Stop" button to halt the process at any time.
-Ethical Considerations
-Legal Use: This tool is intended for authorized penetration testing and security research only. Unauthorized use against systems you do not own or have permission to test is illegal.
-Responsibility: The user assumes all responsibility for ensuring compliance with local laws and regulations.
-Disclosure: Always obtain explicit permission before testing any system.
-Code Structure
-send_request(): Handles individual HTTP requests, logs results, and rotates Tor IPs if enabled.
-generate_random_credentials(): Creates random email and password combinations.
-change_tor_ip(): Communicates with the Tor control port to request a new IP.
-GUI Components: Built using tkinter, including input fields, buttons, and a logging area.
-Example Output
+اضغط على زر "Stop" لإيقاف العملية في أي وقت.
+⚠️ الأخلاقيات والمسؤولية
+استخدم الأداة بشكل قانوني: هذه الأداة مخصصة فقط لأغراض اختبار الاختراق المصرح بها. الاستخدام غير المصرح به غير قانوني.
+تحمل المسؤولية: أنت المسؤول الوحيد عن أي استخدام غير قانوني لهذه الأداة.
+الإفصاح: احصل دائمًا على إذن كتابي قبل اختبار أي نظام.
+📂 هيكلة الكود
+الوظيفة	الوصف
+send_request()	يُرسل طلبات HTTP ويسجل النتائج ويغير عنوان IP عبر Tor إذا كان مفعلًا.
+generate_random_credentials()	يُنشئ بيانات تسجيل دخول عشوائية.
+change_tor_ip()	يتواصل مع منفذ تحكم Tor لتغيير عنوان IP.
+واجهة المستخدم (GUI)	مبنية بـ tkinter وتشمل حقول إدخال وأزرار ومنطقة سجل.
+📜 مثال على الناتج
+plaintext
 
 Copy
-[✓] {'email': 'abc123@gmail.com', 'pass': 'xyz456'} → 200
-[×] {'email': 'def456@gmail.com', 'pass': 'uvw789'} → ConnectionError
-Troubleshooting
-Tor Connection Issues:
+[✓] {'email': 'test123@gmail.com', 'pass': 'pass456'} → 200
+[×] {'email': 'fakeuser@gmail.com', 'pass': 'wrongpass'} → ConnectionError
+🔧 استكشاف الأخطاء وإصلاحها
+المشكلة	الحل
+Tor لا يعمل	تأكد من تشغيل Tor وأن منفذ التحكم (9051) مفتوح.
+فشل الاتصال بالخادم	تحقق من صحة الرابط وتأكد أن الخادم يعمل.
+🤝 المساهمة
+المساهمات مرحب بها! يمكنك:
 
-Ensure Tor is running and the control port is correctly configured.
-Verify the TOR_PASSWORD in the script matches your Tor configuration.
-Request Failures:
-
-Check the target URL for typos.
-Ensure the server is reachable and not blocking your IP.
-Contributing
-Feel free to fork this repository and submit pull requests for improvements. For major changes, open an issue first to discuss the proposed changes.
-
-License
-This project is licensed under the MIT License. See the LICENSE file for details.
+تقديم طلب سحب (Pull Request).
+الإبلاغ عن مشكلات (Issues).
+اقتراح تحسينات أو ميزات جديدة.
+📜 الرخصة
+هذا المشروع مرخص تحت رخصة MIT. اقرأ ملف LICENSE للمزيد من التفاصيل.
